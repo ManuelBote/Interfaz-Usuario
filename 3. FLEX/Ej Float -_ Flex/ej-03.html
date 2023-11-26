@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios float y clear. Ej. 3</title>
+
+  <style>
+    .contenedor{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    
+    .d-flex{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .divtexto {
+      padding: 10px;
+      background-color: coral;
+    }
+
+    .div1 {
+      padding: 50px;
+      background-color: pink;
+    }
+
+    .div2 {
+      padding: 10px;
+      background-color: aqua;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <div class="div1">Div1</div>
+    <div class="d-flex">
+      <div class="divtexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsum possimus eius cum a hic excepturi molestias. Neque saepe fugit, placeat dolor autem porro voluptatibus numquam iste reprehenderit molestias ea.</div>
+      <div class="div2">Div2</div>
+    </div>
+  </div>
+  
+  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem corporis perferendis eos facilis, commodi assumenda et sequi eligendi iure? Officiis tempora labore id expedita asperiores aperiam sint doloribus facere qui</div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+div{
+    width: 25%;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 150px;
+    font-weight: 100;
+}
+
+.div1{
+    background-color: aqua;
+}
+
+.div2{
+    background-color: rgb(255, 249, 237);
+}
+
+.div3{
+    background-color: orange;
+}
+
+.div4{
+    background-color: rgb(0, 89, 255);
+}

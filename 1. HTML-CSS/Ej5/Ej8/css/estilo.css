@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+.div1{
+    width: 33.3%;
+    padding: 5px;
+    float: left;
+    text-align: center;
+}
+.div2{
+    width: 33.3%;
+    padding: 5px;
+    float: left;
+    text-align: center;
+}
+.div3{
+    width: 33.3%;
+    padding: 5px;
+    float: left;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+
+.div4{
+    width: 100%;
+    background-color: gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    float: inline-end;
+}
+
+.p1{
+    float: left;
+}
+
+.p2{
+    float: right;
+}

@@ -1,0 +1,309 @@
+/* ----- Estilos añadidos -------------------------------------------------- */
+
+*{
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: ""; 
+  clear: both;
+  display: table;
+}
+
+/* ---- Estilos básicos ---------------------------------------------------- */
+body {
+  background: rgb(150,175,245);
+  background: linear-gradient(180deg, rgba(150,175,245,1) 0%, rgba(242,245,254,1) 30%);
+  font: 70%/160% "verdana", sans-serif;
+  color: #192666;
+}
+
+.l-float{
+  float: left;
+}
+
+.r-float {
+  float: right;
+}
+
+a {
+  color: #192666;
+}
+
+a:hover {
+  color: #4F6AD7;
+}
+
+p {
+  margin: 1em 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1em 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 260%;
+  font-family: "georgia", serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 180%;
+  font-family: "georgia", serif;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+ul,
+ol {
+  margin: 1em 0 1em 0em;
+  padding: 0;
+}
+
+/* ---- Layout ------------------------------------------------------------- */
+
+#contenedor{
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 900px) {
+  #contenedor {
+    width: 770px; 
+    padding: 0;
+  }
+}
+
+#cabecera {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  background: #233C9B url("img/cabecera.jpg") no-repeat;
+  background-size: cover;
+  padding: 40px 20px;
+}
+
+#contenido {
+  background: #FFF;
+}
+
+#contenido #principal {
+  margin-top: 15px;
+  background: #FFF;
+}
+
+#contenido #secundario {
+  margin: 15px 0 0 0;
+  padding-top: 20px;
+  background-color: #CEDBF9;
+  -webkit-box-shadow: inset 5px 0px 14px 2px rgba(183,202,246,1); 
+  box-shadow: inset 5px 0px 14px 2px rgba(183,202,246,1);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+#pie {
+  padding: 10px;
+  margin-bottom: 50px;
+  background: #FFF;
+  color: #6685CC;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  -webkit-box-shadow: inset 0px -10px 15px -8px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: inset 0px -10px 15px -8px rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0px -10px 15px -8px rgba(0, 0, 0, 0.45);
+  
+}
+
+/* ---- Cabecera ----------------------------------------------------------- */
+#cabecera #logo {
+  margin: 0;
+}
+
+#cabecera #logo a {
+  color: #FFF;
+  line-height: 35px;
+}
+
+#cabecera #logo a:hover {
+  color: #B5C4E3;
+  text-decoration: underline;
+}
+
+#cabecera #buscador fieldset {
+  border: none;
+  padding: 6.5px auto;
+}
+
+/* ---- Menú --------------------------------------------------------------- */
+#menu {
+  background: #192666;
+  padding: 10px 0 0 0;
+}
+
+#menu ul {
+  margin: 0 10px;
+  list-style: none;
+}
+
+#menu ul li {
+  margin: 0 5px 0 0;
+  float: left;
+}
+
+#menu ul li a {
+  display: block;
+  position: relative;
+  padding: 5px 15px;
+  background: #253575;
+  color: #B5C4E3;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#menu ul li a:hover {
+  background: #31479B;
+}
+
+#menu ul li.seleccionado a {
+  background: #FFF;
+  color: #FF9000;
+}
+
+/* ---- Contenidos --------------------------------------------------------- */
+#contenido .articulo {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  -webkit-box-shadow: inset 2px 2px 23px 8px rgba(223,231,245,1); 
+  box-shadow: inset 2px 2px 23px 8px rgba(223,231,245,1);
+}
+
+#contenido .articulo img {
+  width: 100%;
+}
+
+#contenido .articulo h2 {
+  margin: 0 -20px;
+  padding: 10px;
+  background: #DEE5FD;
+  color: #192666;
+}
+
+#contenido .info {
+  margin: 2px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #DEE5FD;
+  color: #6685CC;
+}
+
+#contenido .info a {
+  color: #6685CC;
+}
+
+#contenido .info a:hover {
+  color: #FF9000;
+}
+
+#contenido .info span.fecha,
+#contenido .info span.categoria,
+#contenido .info span.autor,
+#contenido .info span.comentarios {
+  padding-left: 15px;
+}
+
+#contenido .info span.fecha img{
+  width: auto;
+  margin-top: 8px;
+}
+
+#contenido .info span.categoria img{
+  width: auto;
+  margin-top: 8px;
+}
+
+#contenido .info span.autor img{
+  width: auto;
+  margin-top: 8px;
+}
+
+#contenido .info span.comentarios img{
+  width: auto;
+  margin-top: 8px;
+}
+
+/* ----- Secundario -----------------------------------------------------*/
+@media only screen and (min-width: 600px){
+  #contenido #secundario > div {
+  padding: 0;
+}
+}
+
+
+#contenido #secundario h3 {
+  padding: 10px 0 10px 10px;
+  margin-top: 0;
+  background: #A0B9F3;
+  color: #192666;
+}
+
+@media only screen and (min-width: 600px) {
+  #contenido #secundario #sobremi .col-e-4{
+    padding: 15px 0 0 15px;
+  }
+}
+
+#contenido #secundario #sobremi img {
+  width: 100%;
+  margin: 4px 5px 0 0;
+}
+
+#contenido #secundario #sobremi p {
+  margin-top: 0;
+}
+
+#contenido #secundario ul {
+  margin: 15px 0 20px 0;
+  list-style: none;
+}
+
+#contenido #secundario li {
+  border-bottom: 1px solid #E0E8FA;
+}
+
+#contenido #secundario li a {
+  display: block;
+  padding: 3px 0 3px 22px;
+  background: url("img/icono_elemento.gif") 8px no-repeat;
+  text-decoration: none;
+}
+
+#contenido #secundario li a:hover {
+  background-color: #E0E8FA;
+  color: #192666;
+}
+
+#contenido #secundario li.seleccionado a {
+  background: #E0E8FA url("img/icono_elemento_seleccionado.gif") 8px no-repeat;
+  font-weight: bold;
+}
+
+/* ---- Pie ---------------------------------------------------------------- */
+
+#pie p {
+  margin: 0;
+  padding: 0;
+}

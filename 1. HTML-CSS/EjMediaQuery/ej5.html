@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej5</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            width: 100%;
+            float: left;
+            padding: 20px;
+        }
+        .div1{
+            background-color: rgba(128, 128, 128, 0.9);
+        }
+        .div2{
+            background-color: rgba(128, 128, 128, 0.7);
+        }
+        .div3{
+            background-color: rgba(128, 128, 128, 0.5);
+        }
+        .div4{
+            background-color: rgba(128, 128, 128, 0.3);
+        }
+
+        @media(min-width:600px){
+            div{
+                width: 50%;
+            }
+        }
+        @media(min-width:992px){
+            div{
+                width: 25%;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <h1>Column 1</h1>
+      <p>Some text...</p>
+    </div>
+    <div class="div2">
+      <h1>Column 2</h1>
+      <p>Some text...</p>
+    </div>
+    <div class="div3">
+      <h1>Column 3</h1>
+      <p>Some text...</p>
+    </div>
+    <div class="div4">
+      <h1>Column 4</h1>
+      <p>Some text...</p>
+    </div>
+  </body>
+</html>

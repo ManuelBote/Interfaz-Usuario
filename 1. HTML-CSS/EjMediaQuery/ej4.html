@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej4</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+      .nav {
+        background-color: black;
+        overflow: auto;
+      }
+      .caja {
+        float: left;
+        padding: 20px;
+        background-color: black;
+        color:white;
+        text-align: center;
+      }
+
+      @media(max-width:600px){
+        .caja{
+            float: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="caja">Link</div>
+      <div class="caja">Link</div>
+      <div class="caja">Link</div>
+    </div>
+  </body>
+</html>

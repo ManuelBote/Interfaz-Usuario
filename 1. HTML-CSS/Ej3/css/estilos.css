@@ -1,0 +1,43 @@
+table{
+    width: 50%;
+    border-spacing: 5px;
+}
+
+th{
+    border-radius: 5px;
+    border:2px  solid black;
+    text-align: center;
+    margin: 10px;
+    background-color: rgb(158, 255, 255)
+    ;
+}
+
+td{
+    border:1px  solid black;
+    text-align: center;
+    margin: 10px;
+}
+
+td:hover{
+    background-color: orange;
+}
+
+#espana{
+    background-image: linear-gradient(red,yellow, yellow, yellow,red);
+    cursor: pointer;
+}
+
+#argentina{
+    background-image: linear-gradient(aqua,white,white,white,aqua);
+    cursor: pointer;
+}
+
+#francia{
+    background-image: linear-gradient(to right, blue,white,white,white,red);
+    cursor: pointer;
+}
+
+#espana:active, #argentina:active, #francia:active{
+    background-color: white;
+    background-image: none;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      [class*="col-"] {
+        float: left;
+        padding: 20px;
+      }
+      .col-1 {
+        width: 8.33%;
+      }
+      .col-2 {
+        width: 16.66%;
+      }
+      .col-3 {
+        width: 25%;
+      }
+      .col-4 {
+        width: 33.33%;
+      }
+      .col-5 {
+        width: 41.66%;
+      }
+      .col-6 {
+        width: 50%;
+      }
+      .col-7 {
+        width: 58.33%;
+      }
+      .col-8 {
+        width: 66.66%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      .col-10 {
+        width: 83.33%;
+      }
+      .col-11 {
+        width: 91.66%;
+      }
+      .col-12 {
+        width: 100%;
+      }
+
+      .row::after {
+        content: "";
+        clear: both;
+      }
+      .header {
+        overflow: auto;
+      }
+      .logo {
+        float: right;
+      }
+      .navigation {
+        float: left;
+      }
+      .main-content {
+        overflow: auto;
+      }
+      .sidebar {
+        height: 300px;
+      }
+      .sub-content {
+        height: 130px;
+        margin-bottom: 40px;
+      }
+      .sub-content-2 {
+        height: 130px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header row">
+        <div class="col-12">
+          <div class="logo">logo</div>
+          <div class="navigation">navigation</div>
+        </div>
+      </div>
+      <div class="main-content row">
+        <div class="col-3">
+          <div class="sidebar">sidebar</div>
+        </div>
+        <div class="col-9">
+          <div class="sub-content">sub content</div>
+          <div class="sub-content-2">sub content 2</div>
+        </div>
+      </div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>

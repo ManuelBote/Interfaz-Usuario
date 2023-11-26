@@ -1,0 +1,100 @@
+/* Estilos aparte */ 
+*{
+    box-sizing: border-box;
+  }
+  
+  .clearfix::after {
+    content: ""; 
+    clear: both;
+    display: table;
+  }
+
+  .l-float{
+    float: left;
+  }
+
+  .r-float{
+    float: right;
+  }
+
+  body{
+    padding: 0;
+    margin: 0;
+  }
+
+  :root{
+    --color-fondo-boton: white;
+    --color-borde-boton: black;
+  }
+
+  #contenedor{
+    margin-bottom: 500px;
+  }
+
+  /* ----Cabecera---- */
+  .logo img{
+    height: 30px;
+    margin: 20px;
+  }
+
+  .btn_comprar{
+    padding: 10px;
+    border: 1px solid var(--color-borde-boton);
+    background-color: var(--color-fondo-boton);
+    color: black;
+    text-decoration:none;
+    border-radius: 5px;
+    margin: 15px;
+    margin-right: 25px;
+  }
+
+  .btn_comprar:hover{
+    animation: cambio-color 1s forwards;
+  }
+
+  @keyframes cambio-color {
+    100%{
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .imagen_cabecera img{
+    width: 100%;
+  }
+
+  /* ----Contenido---- */
+
+  .texto_cabecera{
+    padding: 10px;
+  }
+  
+  @media only screen and (min-width: 900px){
+    .texto_cabecera{
+      transform: translateY(-250px);
+      font-size: 15px;
+      width: 35%;
+      margin-left: calc(3% + 3rem);
+      overflow: visible;
+      height: 0;
+    }
+  }
+
+  .caja{
+    padding: 20px;
+    border-radius: 1rem;
+  }
+
+  .lightblue{
+    background-color: lightblue;
+  }
+  .lightred{
+    background-color: lightcoral;
+  }
+  .lightgreen{
+    background-color: lightcyan;
+  }
+  .lightyellow{
+    background-color: lightgoldenrodyellow;
+  }
+

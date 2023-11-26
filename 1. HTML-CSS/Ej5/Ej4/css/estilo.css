@@ -1,0 +1,25 @@
+.text{
+    background-color: orange;
+}
+
+.div1{
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    float: right;
+    text-align: center;
+    line-height: 150px;
+}
+
+.div2{
+    background-color: aquamarine;
+    float: left;
+    padding: 10px;
+}
+
+.text2{
+    float: inline-end;
+    margin-top: 30px;
+    
+}
+

@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: ""; 
+    clear: both;
+    display: table;
+  } 
+
+.cabecera{
+    background-image: url("../img/html5-wallpaper.jpg");
+    background-position: center;
+    height: 200px;
+}
+nav{
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.a-left{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+    background-color: black;
+    float: left;
+}
+.a-right{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+    background-color: black;
+    float: right;
+}
+.barra a:hover{
+    background-color: red;
+}
+
+form{
+    border-radius: 5%;
+    text-align: center;
+    padding: 10px;
+    background-color: lightgray;
+}
+.cont-form{
+    text-align: start;
+    padding: 10px 15px;
+}
+.texto-input{
+    width: 100%;
+}
+.texto{
+    width: 100%;
+    resize: vertical;
+}
+
+iframe{
+    width: 100%;
+    height: 300px;
+}
