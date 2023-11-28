@@ -11,16 +11,13 @@
       box-sizing: border-box;
     }
 
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
+    .contenedor-flex{
+      display: flex;
     }
 
     .img-container {
-      float: left;
-      width: 33.33%;
       padding: 5px;
+      flex-grow: 1;
     }
 
     .img-container img {
@@ -37,21 +34,17 @@
       margin-top: 20px;
       padding: 20px;
       font-weight: bold;
+      flex-direction: row-reverse;
+      justify-content: space-between;
     }
 
-    .f-right {
-      float: right;
-    }
-
-    .f-left {
-      float: left;
-    }
+    
   </style>
 
 </head>
 
 <body>
-  <div class="clearfix">
+  <div class="contenedor-flex">
     <div class="img-container">
       <img src="https://picsum.photos/id/14/400/200" alt="random image">
       <div class="titulo_imagen">Lorem ipsum dolor sit amet</div>
@@ -66,9 +59,9 @@
     </div>
   </div>
 
-  <div id="footer" class="clearfix">
-    <div class="f-right">Isaac Expósito</div>
-    <div class="f-left">2º DAW. Diseño de Interfaces Web</div>
+  <div id="footer" class="contenedor-flex">
+    <div>Manuel Bote Zabala</div>
+    <div >2º DAW. Diseño de Interfaces Web</div>
   </div>
 
 </body>

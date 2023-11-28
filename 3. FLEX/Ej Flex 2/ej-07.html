@@ -22,23 +22,18 @@
       padding: 15px;
     }
 
-    .column {
-      float: left;
-      padding: 15px;
-    }
-
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
+    .c-flex {
+      display: flex;
     }
 
     .menu {
-      width: 25%;
+      flex-basis: 25%;
+      padding: 10px;
     }
 
     .content {
-      width: 75%;
+      flex-basis: 75%;
+      padding: 10px;
     }
 
     .menu ul {
@@ -62,8 +57,8 @@
     <h1>Cabecera</h1>
   </div>
 
-  <div class="clearfix">
-    <div class="column menu">
+  <div class="c-flex">
+    <div class="menu">
       <ul>
         <li>Lorem</li>
         <li>Ipsum</li>
@@ -72,7 +67,7 @@
       </ul>
     </div>
 
-    <div class="column content">
+    <div class="content">
       <h1>Lorem ipsum</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illum cum quidem! Velit minima libero quasi
         aspernatur commodi explicabo adipisci, quis facilis, veniam, quae aperiam unde numquam magnam minus nesciunt.

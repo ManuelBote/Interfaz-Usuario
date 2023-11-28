@@ -9,10 +9,15 @@
   <style>
     #header {
       background-color: #333;
-      overflow: auto;
+      display: flex;
+      justify-content: space-between;
     }
 
-    #header a {
+    #header div{
+      padding: 14px 0;
+    }
+
+    #header div a {
       padding: 14px 18px;
       color: white;
       text-decoration: none;
@@ -22,23 +27,21 @@
       background-color: red;
     }
 
-    .f-left {
-      float: left;
-    }
-
-    .f-right {
-      float: right;
-    }
+    
   </style>
 </head>
 
 <body>
   <div id="header">
-    <a class="f-left" href="#">Inicio</a>
-    <a class="f-left" href="#">Nosotros</a>
-    <a class="f-left" href="#">Productos</a>
-    <a class="f-left" href="#">Contacto</a>
-    <a class="f-right" href="#">Salir</a>
+    <div>
+      <a href="#">Inicio</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Productos</a>
+      <a href="#">Contacto</a>
+    </div>
+    <div>
+      <a href="#">Salir</a>
+    </div>
   </div>
 </body>
 
