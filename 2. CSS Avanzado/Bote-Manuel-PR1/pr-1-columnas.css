@@ -160,4 +160,9 @@
   .col-e-12 {
     width: 100%;
   }
+
+  #contenedor {
+    width: 770px; 
+    padding: 0;
+  }
 }
