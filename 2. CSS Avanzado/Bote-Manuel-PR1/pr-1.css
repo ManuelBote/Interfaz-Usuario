@@ -1,4 +1,7 @@
-/* Cambiar colores y margenes
+/* Cambiar colores y margenes*/
+:root{
+  --colorSombras: rgba(183,202,246,1);
+}
 
 /* ----- Estilos añadidos -------------------------------------------------- */
 
@@ -102,8 +105,8 @@ ol {
   margin: 15px 0 0 0;
   padding-top: 20px;
   background-color: #CEDBF9;
-  -webkit-box-shadow: inset 5px 0px 14px 2px rgba(183,202,246,1); 
-  box-shadow: inset 5px 0px 14px 2px rgba(183,202,246,1);
+  -webkit-box-shadow: inset 5px 0px 14px 2px var(--colorSombras); 
+  box-shadow: inset 5px 0px 14px 2px var(--colorSombras);
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
 }
@@ -115,9 +118,9 @@ ol {
   color: #6685CC;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  -webkit-box-shadow: inset 0px -10px 15px -8px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: inset 0px -10px 15px -8px rgba(0, 0, 0, 0.45);
-  box-shadow: inset 0px -10px 15px -8px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: inset 0px -10px 15px -8px var(--colorSombras);
+  -moz-box-shadow: inset 0px -10px 15px -8px var(--colorSombras);
+  box-shadow: inset 0px -10px 15px -8px var(--colorSombras);
   
 }
 
@@ -241,10 +244,17 @@ ol {
 }
 
 /* ----- Secundario -----------------------------------------------------*/
-@media only screen and (min-width: 600px){
-  #contenido #secundario > div {
+
+#contenido #secundario > div {
   padding: 0;
 }
+
+#contenido #secundario > div.p-left{
+  padding-left: 10px;
+}
+
+#contenido #secundario > div.p-right{
+  padding-right: 10px;
 }
 
 
@@ -253,12 +263,6 @@ ol {
   margin-top: 0;
   background: #A0B9F3;
   color: #192666;
-}
-
-@media only screen and (min-width: 600px) {
-  #contenido #secundario #sobremi .col-e-4{
-    padding: 15px 0 0 15px;
-  }
 }
 
 #contenido #secundario #sobremi img {

@@ -109,6 +109,16 @@
   .col-t-12 {
     width: 100%;
   }
+
+  #contenido #secundario #sobremi .col-e-4{
+    padding: 15px 0 0 15px;
+  }
+
+  #contenido #secundario > div.p-left,
+  #contenido #secundario > div.p-right{
+    padding: 0;
+  }
+
 }
 
 /* For desktop: */
