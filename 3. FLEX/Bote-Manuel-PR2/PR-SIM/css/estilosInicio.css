@@ -1,0 +1,126 @@
+.d-flex{
+    display: flex;
+}
+
+.cabecera{
+    background-image: url("../img/html5-wallpaper.jpg");
+    background-position: center;
+    height: 200px;
+}
+nav{
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.a-left{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+    background-color: black;
+
+}
+.a-right{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+    background-color: black;
+    margin-left: auto;
+}
+nav a:hover{
+    background-color: red;
+}
+
+.gatos{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.gatos p{
+    margin:0;
+    margin-bottom: 20px;
+}
+img{
+    width: 100%;
+}
+.gatos:hover{
+    color: #555;
+}
+
+/*Primera caja y mensaje que se muestraº*/
+.caja1{
+    padding: 20px;
+    background-color: yellowgreen;
+    height: 200px;
+}
+.mensaje1{
+    background-color: lightblue;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+.mensaje2{
+    background-color: yellow;
+    border: 1px solid red;
+    text-align: center;
+    padding: 5px;
+    display: inline-block;
+    position: relative; 
+    z-index: -1;
+    right: 200px;
+}
+.mensaje1:hover + .mensaje2{
+    top: 34px;
+    z-index: 3;
+}
+
+.caja2{
+    padding: 20px;
+    background-color: tomato;
+    height: 200px;
+}
+.caja3{
+    padding: 20px;
+    background-color: lightblue;
+    height: 200px;
+}
+.caja4{
+    padding: 20px;
+    background-color: pink;
+    height: 200px;
+}
+.caja5{
+    padding: 20px;
+    background-color: lightseagreen;
+    height: 200px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@media (max-width:1200px){
+    .fixed{
+        display: none;
+    }
+}
+
+.fixed{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    opacity: 0.6;
+    border-radius: 50%;
+    bottom: 50px;
+    right: 50px;
+    padding: 12px;
+}
+.fixed img{
+    opacity: 0.8;
+}
