@@ -27,7 +27,7 @@ div {
 #container-izq #container-izq-2 {
   border-width: 0px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #container-izq #container-izq-3 {
