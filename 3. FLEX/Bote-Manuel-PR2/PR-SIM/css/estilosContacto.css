@@ -26,6 +26,7 @@ nav{
     padding: 15px;
     color: white;
     background-color: black;
+    margin-left: auto;
 }
 .barra a:hover{
     background-color: red;
