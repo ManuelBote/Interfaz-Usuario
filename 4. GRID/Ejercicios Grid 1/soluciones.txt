@@ -1,0 +1,15 @@
+1.- Se crearan 2 filas, la 1º de 50px y la 2º de 100px.
+Tambien se crearán 3 columnas, la 1º de 100px, la 2º de 200px y la 3º del resto del espacio del contenedor.
+
+2.- Se crearan 3 filas, la 1º y la 3º ocuparan el espacio que ocupen su contenido, mientras que la 2º ocupara 100px.
+Tambien se crearán 3 columnas, la 1º de 100px, la 2º de 200px y la 3º del resto del espacio del contenedor.
+
+**3.- Se crea una fila que solo ocupara el espacio que ocupe el contenido.
+Se crearan 3 columnas, la 3º medira 100px, la 1º ocupara el resto del espacio que sobra en el contenedor 
+y la 2º solo ocupara lo que ocupe su contenido porque ya hay un fr que le quita todo el espacio.
+
+4.- Se crea una fila que solo ocupara el espacio que ocupe el contenido.
+Se crearan 3 columnas, la 3º ocupara 100px, y para las otras dos se dividira el espacio sobrante en 3 y se la repartira 1 parte a la 1º y dos partes a la 2º
+Ejemplo: 300/3 -> 1º-100px  2º-200px 
+
+5.- Se creara una fila que mide 100px.
