@@ -2,9 +2,10 @@
 Tambien se crearán 3 columnas, la 1º de 100px, la 2º de 200px y la 3º del resto del espacio del contenedor.
 
 2.- Se crearan 3 filas, la 1º y la 3º ocuparan el espacio que ocupen su contenido, mientras que la 2º ocupara 100px.
+La 3º fila solo existira si es necesario.
 Tambien se crearán 3 columnas, la 1º de 100px, la 2º de 200px y la 3º del resto del espacio del contenedor.
 
-**3.- Se crea una fila que solo ocupara el espacio que ocupe el contenido.
+3.- Se crea una fila que solo ocupara el espacio que ocupe el contenido.
 Se crearan 3 columnas, la 3º medira 100px, la 1º ocupara el resto del espacio que sobra en el contenedor 
 y la 2º solo ocupara lo que ocupe su contenido porque ya hay un fr que le quita todo el espacio.
 
@@ -13,3 +14,29 @@ Se crearan 3 columnas, la 3º ocupara 100px, y para las otras dos se dividira el
 Ejemplo: 300/3 -> 1º-100px  2º-200px 
 
 5.- Se creara una fila que mide 100px.
+Se crearan 3 columnas, la 2º y la 3º mediran 50px, mientras que la primera ocupara todo el espacio restante.
+
+6.- Se crean 2 filas, ambas solo ocuparan el espacion necesario por el contenido.
+Se crean 6 columnas la 1º mide 100px, la 2º y la 3º se repiten otra vez y de esas la primera ocupara el espacio disponible repartida entre otros con fr,
+y la segunda medira 50px. La 6º columna medira solo lo que ocupe su contenido.
+
+7.- Se crean 3 filas la 1º medira 100px, y la 2º y 3º solo si es necesario(si tiene contenido) y si se crean solo ocuparan lo que ocupe su contenido.
+Se crean 6 columnas la 1º mide 100px, la 2º y la 3º se repiten otra vez y de esas la primera ocupara el espacio disponible repartida entre otros con fr,
+y la segunda medira 50px. La 6º columna medira solo lo que ocupe su contenido.
+
+8.- Se crea 1 fila que solo ocupa lo que ocupe su contenido. Si no tiene no se crea la fila
+Se crean 6 columnas la 1º mide 100px, la 2º y la 3º se repiten otra vez y de esas la primera ocupara el espacio disponible repartida entre otros con fr,
+y la segunda medira 50px. La 6º columna medira solo lo que ocupe su contenido.
+
+9.- Se crea 1 fila que solo ocupa lo que ocupe su contenido. Si no tiene no se crea la fila.
+Solo se crea 1 columna que ocupara 500px si tiene espacio suficiente, sino ocupara menos hasta llegar a 200px donde se desbordara.
+
+10.- Se crea 1 fila si tiene contenido, que solo ocupara el espacio que ocupe su contenido o contenedor.
+Se crean 2 columnas de como maximo 500px si el espacio disponible se lo permite, sino, disminuiran su tamaño hasta llegas a los 200px cada una.
+
+11.- Se crean 2 filas que ocuparan lo que ocupe su contenido o contenedor, 
+pero la 1º fila simpre ocupara el doble que la segunda, por lo que si una cambia de tamaño, la otra tambien.
+Se crean 3 columnas, la 1º solo ocupara el espacio de su contenido, mientras que las otras 2 ocuparan todos el espacio disponible repartido entre ellas 2,
+pero al ir disminuyendo las columnas solo disminuiran hasta los 100px.
+
+12.- 
