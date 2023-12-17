@@ -18,56 +18,55 @@
 #cabecera{
     background-color: var(--colorPrincipal);
     padding: 30px;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 20px;
 }
 
 /* Contenedor Homer */ 
 
 #contenedor-homer{
-    margin: 20px;
     padding: 5px 10px;
     background-color: var(--colorContenedorHomer);
 }
 
 .caja-imagen-homer{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 40px;
+    margin-right: 20px;
+    float:  left;
 }
 
 .imagen-homer{
-    width: 100%;
+    width: 160px;
     border-radius: 50%;
     border: 1px solid black;
     background-color: white;
+    box-shadow: 0px 0px 30px 0px rgb(0, 0, 0);
 }
 
 .nombre-homer{
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    top: 86%;
-}
-
-.nombre-homer h3{
-    margin: 0px;
+  background-color: black;
+  color: white;
+  padding: 3px 6px;
+  font-size: 16pt;
+  font-weight: bold;
+  transform: translateY(-20px);
 }
 
 #contenedor-homer p{
     padding: 5px;
+    margin: 0;
     
+}
+
+#contenedor-homer p::first-letter{
+    font-size: 200%;
+    font-weight: bold;
 }
 
 /* Formulario */ 
 #formulario{
     text-align: center;
     background-color: var(--colorFormulario);
-    margin: 20px;
 }
 
 .formulario div input,
@@ -87,51 +86,26 @@
 
 
 .hola{
-    display: inline-block;
     background-color: lightcoral;
-    padding: 10px;
+    padding: 25px;
 }
 
 .adios{
-    display: inline-block;
     background-color: lightgreen;
-    padding: 10px;
-    position: absolute;
-    right: 20px;
+    padding: 25px;
 }
 
-.texto-medio{
-margin: 10px 65px 0 -90px;
-}
-
-@media only screen and (max-width: 599px) {
-    .hola{
-        display: block;
-    }
-    .adios{
-        display: block;
-        position: relative;
-        margin-left: 20px;
-    }
-    .texto-medio{
-        margin: 10px 10px 0 10px;
-    }
-}
-
-
-
-
-.texto-final{
-    margin: 10px;
-    margin-right: 20px;
-}
+p {
+    text-align: justify;
+  }
 
 /*   Footer   */
 
 #footer{
     background-color: var(--colorPrincipal);
     padding: 20px;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 20px;
 }
 
