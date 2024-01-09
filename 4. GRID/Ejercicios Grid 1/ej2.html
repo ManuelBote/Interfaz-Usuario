@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .container { 
+            display: grid; 
+            gap: 5px;
+
+            grid-template-areas: 
+                "uno uno dos dos tres tres" 
+                "cuatro cuatro cuatro cinco cinco cinco" 
+                "seis seis siete siete ocho ocho"; 
+        } 
+       
+        .item { 
+            padding: 20px; 
+            text-align: center; 
+            background: lightcoral;
+        } 
+
+        .uno{
+            grid-area: uno;
+        }
+
+        .dos{
+            grid-area: dos;
+        }
+
+        .tres{
+            grid-area: tres;
+        }
+
+        .cuatro{
+            grid-area: cuatro;
+        }
+
+        .cinco{
+            grid-area: cinco;
+        }
+
+        .seis{
+            grid-area: seis;
+        }
+
+        .siete{
+            grid-area: siete;
+        }
+
+        .ocho{
+            grid-area: ocho;
+        }
+
+
+       
+        
+      </style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="item uno">uno</div> 
+        <div class="item dos">dos</div> 
+        <div class="item tres">tres</div> 
+        <div class="item cuatro">cuatro</div> 
+        <div class="item cinco">cinco</div> 
+        <div class="item seis">seis</div> 
+        <div class="item siete">siete</div> 
+        <div class="item ocho">ocho</div> 
+    </div> 
+</body>
+</html>
