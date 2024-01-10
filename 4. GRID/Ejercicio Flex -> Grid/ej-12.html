@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios float y clear. Ej. 12</title>
+  <link rel="stylesheet" href="ej-10.css">
+
+  <style>
+    /* Estilos para este ejercicio concreto */
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .contenido{
+      display: flex;
+      padding: 0;
+    }
+
+    .sidebar {
+      height: 300px;
+      flex-grow: 1;
+    }
+
+    .main-content {
+      height: 300px;
+      flex-grow: 1;
+    }
+
+    .sub-content {
+      height: 300px;
+      flex-grow: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">header</div>
+
+    <div class="contenido">
+      <div class="sidebar">sidebar</div>
+      <div class="main-content">Main content</div>
+      <div class="sub-content">sub content </div>
+    </div>
+
+    <div class="footer">footer</div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios float y clear. Ej. 8</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .contenedor-flex{
+      display: flex;
+    }
+
+    .img-container {
+      padding: 5px;
+      flex-grow: 1;
+    }
+
+    .img-container img {
+      width: 100%;
+    }
+
+    .titulo_imagen {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #footer {
+      background-color: gray;
+      margin-top: 20px;
+      padding: 20px;
+      font-weight: bold;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    
+  </style>
+
+</head>
+
+<body>
+  <div class="contenedor-flex">
+    <div class="img-container">
+      <img src="https://picsum.photos/id/14/400/200" alt="random image">
+      <div class="titulo_imagen">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="img-container">
+      <img src="https://picsum.photos/id/16/400/200" alt="random image">
+      <div class="titulo_imagen">Facilis tempora ab quibusdam</div>
+    </div>
+    <div class="img-container">
+      <img src="https://picsum.photos/id/17/400/200" alt="random image">
+      <div class="titulo_imagen">Autem saepe accusantium</div>
+    </div>
+  </div>
+
+  <div id="footer" class="contenedor-flex">
+    <div>Manuel Bote Zabala</div>
+    <div >2º DAW. Diseño de Interfaces Web</div>
+  </div>
+
+</body>
+
+</html>

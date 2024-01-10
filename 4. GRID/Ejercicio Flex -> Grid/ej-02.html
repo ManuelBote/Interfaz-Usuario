@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios float y clear. Ej. 2</title>
+
+    <style>
+      .contenedor {
+        display: grid;
+        grid-template-columns: auto auto 1fr auto;
+        grid-auto-flow: dense;
+      }
+
+      .div1 {
+        padding: 50px;
+        background-color: pink;
+        grid-column: -2 / -1;
+        
+      }
+
+      .div2 {
+        padding: 50px;
+        background-color: aqua;
+        grid-column: 1 / 2;
+        
+      }
+
+      .div3 {
+        padding: 50px;
+        background-color: coral;
+        grid-column: 2 / 3;
+        
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <div class="div1">Div1</div>
+      <div class="div2">Div2</div>
+      <div class="div3">Div3</div>
+    </div>
+  </body>
+</html>
