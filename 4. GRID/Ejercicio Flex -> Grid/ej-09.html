@@ -9,15 +9,13 @@
   <style>
     #header {
       background-color: #333;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(4, auto) 1fr auto;
+      justify-content: start;
     }
 
-    #header div{
-      padding: 14px 0;
-    }
 
-    #header div a {
+    #header a {
       padding: 14px 18px;
       color: white;
       text-decoration: none;
@@ -27,21 +25,21 @@
       background-color: red;
     }
 
+    .salir{
+      justify-self: end;
+    }
+
     
   </style>
 </head>
 
 <body>
   <div id="header">
-    <div>
       <a href="#">Inicio</a>
       <a href="#">Nosotros</a>
       <a href="#">Productos</a>
       <a href="#">Contacto</a>
-    </div>
-    <div>
-      <a href="#">Salir</a>
-    </div>
+      <a class="salir" href="#">Salir</a>
   </div>
 </body>
 

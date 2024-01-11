@@ -13,29 +13,24 @@
       width: 1024px;
       margin: 0 auto;
     }
-
-    .container{
-      display: flex;
-      flex-direction: column;
-    }
+    
     .contenido{
-      display: flex;
+      display: grid;
       padding: 0;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
     }
 
     .sidebar {
       height: 300px;
-      flex-grow: 1;
     }
 
     .main-content {
       height: 300px;
-      flex-grow: 1;
     }
 
     .sub-content {
       height: 300px;
-      flex-grow: 1;
     }
 
   </style>

@@ -11,8 +11,9 @@
       box-sizing: border-box;
     }
 
-    .contenedor-flex{
-      display: flex;
+    .contenedor-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
     .img-container {
@@ -30,12 +31,24 @@
     }
 
     #footer {
+      display: grid;
       background-color: gray;
       margin-top: 20px;
       padding: 20px;
       font-weight: bold;
-      flex-direction: row-reverse;
-      justify-content: space-between;
+     grid-template-areas: 
+     "dos uno";
+
+    }
+
+    .div1{
+      grid-area: uno;
+      justify-self: end;
+    }
+
+    .div2{
+      grid-area: dos;
+      justify-self: start;
     }
 
     
@@ -44,7 +57,7 @@
 </head>
 
 <body>
-  <div class="contenedor-flex">
+  <div class="contenedor-grid">
     <div class="img-container">
       <img src="https://picsum.photos/id/14/400/200" alt="random image">
       <div class="titulo_imagen">Lorem ipsum dolor sit amet</div>
@@ -59,9 +72,9 @@
     </div>
   </div>
 
-  <div id="footer" class="contenedor-flex">
-    <div>Manuel Bote Zabala</div>
-    <div >2º DAW. Diseño de Interfaces Web</div>
+  <div id="footer">
+    <div class="div1">Manuel Bote Zabala</div>
+    <div class="div2">2º DAW. Diseño de Interfaces Web</div>
   </div>
 
 </body>

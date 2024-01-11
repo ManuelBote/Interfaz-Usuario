@@ -9,25 +9,28 @@
   <style>
     .contenedor{
       display: grid;
-      grid-template-columns: auto auto;
-      grid-auto-flow: dense;
+      grid-template-columns: 1fr auto;
+      grid-template-areas: 
+      " texto uno "
+      " dos uno ";
     }
 
     .divtexto {
       padding: 10px;
       background-color: coral;
+      grid-area: texto;
     }
 
     .div1 {
       padding: 50px;
       background-color: pink;
-      grid-column: 2 / 3;
-      grid-row: 1 / 3;
+      grid-area: uno;
     }
 
     .div2 {
       padding: 10px;
       background-color: aqua;
+      grid-area: dos;
       justify-self: start;
       align-self: start;
     }

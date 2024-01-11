@@ -15,37 +15,41 @@
       margin: 0 auto;
     }
     
-    .c-flex{
-      display: flex;
+    .c-grid{
+      display: grid;
+      grid-template-columns: 30% 1fr;
     }
-    
-    .header{
-      justify-content: space-between;
+
+
+    .logo{
+      justify-self: start;
     }
 
     .main-content{
-      justify-content: space-between;
+      grid-template-rows: 60px;
+      grid-template-areas: 
+      " sidebar sub1 "
+      " sidebar sub2 "
+      ;
+      row-gap: 10px;
     }
-
 
     .sidebar {
-      flex-basis: 25%;
       height: 300px;
-    }
-
-    .contenido{
-      flex-basis: 70%;
-      flex-direction: column;
-      padding: 0;
+      grid-area: sidebar;
+      margin-right: 10px;
     }
 
     .sub-content {
-      margin-bottom: 20px;
+      grid-area: sub1;
+      align-self: start;
     }
 
-    .navigation {
-      flex-basis: 70%;
+    .sub-content-2 {
+      grid-area: sub2;
+      align-self: start;
     }
+
 
   </style>
 </head>
@@ -53,17 +57,15 @@
 <body>
   <div class="container">
 
-    <div class="header c-flex">
+    <div class="header c-grid">
       <div class="logo">logo</div>
       <div class="navigation">navigation</div>
     </div>
 
-    <div class="main-content c-flex">
+    <div class="main-content c-grid">
       <div class="sidebar">sidebar</div>
-      <div class="contenido c-flex">
-        <div class="sub-content">sub content</div>
-        <div class="sub-content-2">sub content 2</div>
-      </div>
+      <div class="sub-content">sub content</div>
+      <div class="sub-content-2">sub content 2</div>
     </div>
 
     <div class="footer">footer</div>

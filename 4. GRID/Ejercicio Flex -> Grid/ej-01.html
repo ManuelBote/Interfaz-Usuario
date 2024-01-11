@@ -10,21 +10,21 @@
   
   .contenedor{
     display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-flow: dense;
+    grid-template-areas: 
+    "dos uno";
   }
     .div1 {
       padding: 50px;
       background-color: pink;
       justify-self: end;
-      grid-column: -2 / -1;
+      grid-area: uno;
     }
 
     .div2 {
       padding: 50px;
       background-color: aqua;
       justify-self: start;
-      grid-column: 1 / 2;
+      grid-area: dos;
     }
 
  
