@@ -1,0 +1,38 @@
+@media only screen and (min-width: 500px){
+
+}
+
+/*--- Vista de ordenador ---*/
+@media only screen and (min-width: 900px){
+
+    /*--- Cabecera ---*/
+    header{
+        grid-template-columns: auto 1fr auto;
+        grid-auto-flow: dense;
+    }
+
+    .curso, .asignatura{
+        align-self: start;
+    }
+
+    .asignatura{
+        grid-column: 3/-1;
+    }
+
+    .titulo{
+        grid-column: 2/3;  
+    }
+
+    /*--- Barra de navegacion ---*/
+    nav{
+        background-color: var(--color-nav);
+        grid-template-columns: repeat(5, 170px); /* Al ser 170px*5 da igaul a 850px */
+        justify-content: center;
+    }
+
+    /*--- Principal ---*/
+    main{
+        grid-template-columns: 70% 1fr;
+        gap:20px
+    }
+}

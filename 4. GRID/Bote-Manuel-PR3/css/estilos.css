@@ -1,0 +1,129 @@
+:root{
+    --color-superior-cabecera: #E5B25D;
+    --color-cabecera: #F2DD6E;
+    --color-nav: #523A34;
+    --color-texto-nav: #FFF;
+}
+
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#container{
+    display: grid;
+} 
+
+img{
+    width: 100%;
+}
+
+
+/*--- Cabecera ---*/
+
+header{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: var(--color-cabecera);
+}
+
+.curso, .asignatura{
+    background-color: var(--color-superior-cabecera);
+    padding: 10px;
+}
+
+.asignatura{
+    text-align: end;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    grid-column: 1/-1;
+}
+
+
+/*--- Barra de navegacion ---*/
+
+nav{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+nav a{
+    background-color: var(--color-nav);
+    color: var(--color-texto-nav);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: var(--color-texto-nav);
+    color: var(--color-nav);
+}
+
+/*--- Principal ---*/
+main{
+    display: grid;
+    padding: 20px;
+}
+
+/*--- Article (cajas de colores) ---*/
+
+main article{
+    display: grid;
+    margin-bottom: 30px;
+    grid-template-areas: 
+    "rojo"
+    "verde"
+    "azul"
+    "gris"
+    "naranja"
+    "amarillo";
+}
+
+main article :nth-child(1) {
+    background-color: lightcoral;
+    grid-area: rojo;
+} 
+
+main article :nth-child(2) {
+    background-color: lightgreen;
+    grid-area: verde;
+}
+
+main article :nth-child(3) {
+    background-color: lightblue;
+    grid-area: azul;
+} 
+
+main article :nth-child(4) {
+    background-color: lightgray;
+    grid-area: gris;
+} 
+
+main article :nth-child(5) {
+    background-color: lightsalmon;
+    grid-area: naranja;
+} 
+
+main article :nth-child(6) {
+    background-color: lightyellow;
+    grid-area: amarillo;
+} 
+
+
+/*--- Section (Imagenes) ---*/
+
+section{
+    display: grid;
+}
+
+section img{
+    margin-bottom: 15px;
+}
