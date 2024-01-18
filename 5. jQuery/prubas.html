@@ -7,25 +7,15 @@
     <script src="jquery-3.7.1.min.js"></script>
   </head>
   <body>
-    <div id="container">
-      <p class="primero">1</p>
-      <p>2</p>
-      <p>3</p>
-      <p>4</p>
-    </div>
-
-    <input id="mi-boton" type="button" value="Enviar" />
-
-    <script>
-      $(document).ready(function () {
-        console.log("Hola mundo");
-        $("#mi-boton").click(boton_click);
-      });
-
-      function boton_click() {
-        alert("Has pulsado el botón");
-      }
-      
-    </script>
+    <input id="mi-boton" type="button" value="Enviar">
+<script>
+$(document).ready(function () {
+$('#mi-boton').on('click', function (event) {
+console.log('Tipo de evento:', event.type);
+console.log('Posición del mouse X:', event.pageX);
+console.log('Posición del mouse Y:', event.pageY);
+});
+});
+</script>
   </body>
 </html>
