@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej6</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form> 
+        <label for="checkbox"> Selecciona para habilitar el botón:</label> 
+        <input type="checkbox" id="checkbox"> 
+        <br> 
+        <button id="submit-button" disabled>Enviar</button> 
+      </form>
+
+      <script>
+        $(document).ready(function () {
+            var $boton = $("#submit-button");
+            $("#checkbox").on("change", function(){
+                if($(this).prop("checked") == true){
+                    $boton.prop({disabled:false});
+                } else{
+                    $boton.prop({disabled:true});
+                }
+            })
+        });
+      </script>
+</body>
+</html>
