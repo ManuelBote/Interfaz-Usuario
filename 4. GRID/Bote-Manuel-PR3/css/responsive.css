@@ -1,6 +1,9 @@
 @media only screen and (min-width: 500px){
 
     /*--- Principal ---*/
+    main article div{
+        padding: 15px 10px 15px 10px;
+    }
 
     /*--- Article (cajas de colores) ---*/
 

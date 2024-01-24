@@ -87,10 +87,6 @@ main article{
     "amarillo";
 }
 
-main article div{
-    padding: 15px 10px 15px 10px;
-}
-
 main article :nth-child(1) {
     background-color: lightcoral;
     grid-area: rojo;
