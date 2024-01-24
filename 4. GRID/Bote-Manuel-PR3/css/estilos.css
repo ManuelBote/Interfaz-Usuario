@@ -41,7 +41,7 @@ header{
 
 .titulo{
     text-align: center;
-    font-size: 20px;
+    font-size: 2em;
     padding: 10px;
     grid-column: 1/-1;
 }
@@ -87,6 +87,10 @@ main article{
     "amarillo";
 }
 
+main article div{
+    padding: 15px 10px 15px 10px;
+}
+
 main article :nth-child(1) {
     background-color: lightcoral;
     grid-area: rojo;
@@ -122,8 +126,5 @@ main article :nth-child(6) {
 
 section{
     display: grid;
-}
-
-section img{
-    margin-bottom: 15px;
+    gap: 15px;
 }

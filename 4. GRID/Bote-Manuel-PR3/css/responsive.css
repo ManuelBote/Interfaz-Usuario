@@ -1,5 +1,38 @@
 @media only screen and (min-width: 500px){
 
+    /*--- Principal ---*/
+
+    /*--- Article (cajas de colores) ---*/
+
+    main article{
+        margin-bottom: 30px;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+        "rojo verde verde"
+        "rojo azul gris"
+        "rojo naranja amarillo"
+       ;
+    }
+
+    main article :nth-child(3) {
+        align-self: start;
+    } 
+
+    /* main article :nth-child(5) {
+        
+    }  */
+    
+    /*--- Section (Imagenes) ---*/
+
+    section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section :nth-child(3){
+        grid-column: 1/-1;
+        justify-self: center;
+        width: 50%;
+    }
 }
 
 /*--- Vista de ordenador ---*/
@@ -32,7 +65,34 @@
 
     /*--- Principal ---*/
     main{
-        grid-template-columns: 70% 1fr;
+        grid-template-columns: 1fr 300px;
         gap:20px
+    }
+
+    /*--- Article (cajas de colores) ---*/
+
+    main article{
+        margin-bottom: 30px;
+        grid-template-rows: repeat(3, max-content);
+        grid-template-columns: auto 50px auto 50px 1fr;
+        grid-template-areas: 
+        "rojo verde verde verde verde"
+        "rojo . azul . gris"
+        "naranja . azul . amarillo"
+       ;
+    }
+
+    main article :nth-child(3) {
+        align-self: stretch;
+    } 
+
+    /*--- Section (Imagenes) ---*/
+
+    section{
+        grid-template-columns: 1fr;
+    }
+
+    section :nth-child(3){
+        width: 100%;
     }
 }
