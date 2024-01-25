@@ -9,15 +9,16 @@
 
     main article{
         margin-bottom: 30px;
-        grid-template-columns: auto auto 1fr;
+        grid-template-columns: auto 1fr 1fr;
         grid-template-areas: 
         "rojo verde verde"
         "rojo azul gris"
+        "rojo naranja gris"
         "rojo naranja amarillo"
        ;
     }
 
-    main article :nth-child(3) {
+    main article :nth-child(5) {
         align-self: start;
     } 
 
@@ -85,7 +86,7 @@
        ;
     }
 
-    main article :nth-child(3) {
+    main article :nth-child(5) {
         align-self: stretch;
     } 
 
