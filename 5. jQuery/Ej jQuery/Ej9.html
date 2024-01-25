@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej9</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <style> 
+      #ejemplo { 
+        width: 200px; 
+        padding: 20px; 
+        border: 10px solid black; 
+      } 
+    </style> 
+     
+    <div id="ejemplo"></div> 
+    <script>
+      $(document).ready(function () {
+        
+        console.log("Ancho con .width(): "+ $("#ejemplo").width()+"px");
+        console.log("Ancho con .innerWidth(): "+ $("#ejemplo").innerWidth()+"px");
+        console.log("Ancho con .outherWidth(): "+ $("#ejemplo").outerWidth()+"px");
+
+      });
+    </script>
+  </body>
+</html>

@@ -6,16 +6,25 @@
     <title>Document</title>
     <script src="jquery-3.7.1.min.js"></script>
   </head>
-  <body>
-    <input id="mi-boton" type="button" value="Enviar">
-<script>
-$(document).ready(function () {
-$('#mi-boton').on('click', function (event) {
-console.log('Tipo de evento:', event.type);
-console.log('Posición del mouse X:', event.pageX);
-console.log('Posición del mouse Y:', event.pageY);
-});
-});
-</script>
+  <button id="boton">Dale</button> 
+  <div id="saludo" style="background-color: #bca; width: 100px">Hola Mundo</div> 
+   
+  <script> 
+    $(document).ready(function () { 
+      $("#boton").click(function () { 
+        $("#saludo").animate({ 
+          width: "70%", 
+          opacity: 0.5, 
+          marginLeft: "1em", 
+          fontSize: "3em", 
+          borderWidth: "15px" 
+        }, 1500, "swing", function () { 
+          $(this).html("Animación acabada"); 
+        }); 
+      }); 
+    }); 
+  </script> 
+   
+  
   </body>
 </html>
