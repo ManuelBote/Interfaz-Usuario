@@ -69,15 +69,18 @@
 
     /*--- Article (cajas de colores) ---*/
     main article{
-        margin-bottom: 30px;
-        grid-template-rows: repeat(3, max-content);
-        grid-template-columns: auto minmax(50px, 1fr) auto minmax(50px, 1fr) auto;
+        align-self: start;
+        grid-template-columns: max-content auto auto;
         grid-template-areas: 
-        "rojo verde verde verde verde"
-        "rojo . azul . gris"
-        "naranja . azul . amarillo"
+        "rojo verde verde"
+        "rojo azul gris"
+        "naranja azul amarillo"
        ;
     }
+
+    main article :nth-child(3) {
+        justify-self: center;
+    } 
 
     main article :nth-child(5) {
         align-self: stretch;
@@ -91,4 +94,5 @@
     section :nth-child(3){
         width: 100%;
     }
+
 }
