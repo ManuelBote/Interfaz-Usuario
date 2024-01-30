@@ -47,6 +47,9 @@
     header{
         grid-template-columns: auto 1fr auto;
         grid-auto-flow: dense;
+        /* Dense funciona ya que lo que hace es que si existe un espacio vacio dentro del grid y hay un elemento hijo del grid 
+        que pueda ocuparlo se desplazara hasta ese sitio, tal y como ocurre con el titulo que ocupa el espacio que se genera en el medio.
+        También se podia haber puesto un "grid-row: 1/2" a .titulo para que haga ocurra ese efecto*/
     }
 
     .curso, .asignatura{
@@ -58,7 +61,8 @@
     }
 
     .titulo{
-        grid-column: 2/3;  
+        grid-column: 2/3;
+        /* grid-row: 1/2;   */
     }
 
     /*--- Barra de navegacion ---*/
