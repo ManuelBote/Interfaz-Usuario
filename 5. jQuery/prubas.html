@@ -6,27 +6,23 @@
     <title>Document</title>
     <script src="jquery-3.7.1.min.js"></script>
   </head>
-  
-  <!-- Desmarcado al cargar la página --> 
-<label for="cb1">cb1</label> 
-<input type="checkbox" name="cb1" id="cb1"> 
-<br> 
- 
-<!-- Marcado al cargar la página --> 
-<label for="cb2">cb2</label> 
-<input type="checkbox" name="cb2" id="cb2" checked> 
- 
-<script> 
-  $(document).ready(function () { 
-    $(":checkbox").on("change", function () { 
-      if ($('#cb1').attr('checked')) { console.log("cb1 IS checked!"); } 
-      else { console.log("cb1 IS NOT checked!"); } 
-      if ($('#cb2').attr('checked')) { console.log("cb2 IS checked!"); } 
-      else { console.log("cb2 IS NOT checked!"); } 
-    }); 
-  }); 
-</script> 
+  <body>
+    <input type="button" id="boton" value="Cargar HTML externo" />
+    <div id="cargaexterna">Aquí se cargará el HTML externo</div>
 
-  
+    <script>
+      $(document).ready(function () {
+        $("#boton").on("click", function () {
+          $.ajax({
+            method: "GET",
+            url: "mi-otra-pagina.php",
+            success: function (data, textStatus, jqXHR) {
+              $("#cargaexterna").html(data);
+            },
+            data: { coche: "Ford", modelo: "Focus", color: "rojo" },
+          });
+        });
+      });
+    </script>
   </body>
 </html>
