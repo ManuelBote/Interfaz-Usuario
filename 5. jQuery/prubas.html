@@ -6,25 +6,27 @@
     <title>Document</title>
     <script src="jquery-3.7.1.min.js"></script>
   </head>
-  <button id="boton">Dale</button> 
-  <div id="saludo" style="background-color: #bca; width: 100px">Hola Mundo</div> 
-   
-  <script> 
-    $(document).ready(function () { 
-      $("#boton").click(function () { 
-        $("#saludo").animate({ 
-          width: "70%", 
-          opacity: 0.5, 
-          marginLeft: "1em", 
-          fontSize: "3em", 
-          borderWidth: "15px" 
-        }, 1500, "swing", function () { 
-          $(this).html("Animación acabada"); 
-        }); 
-      }); 
+  
+  <!-- Desmarcado al cargar la página --> 
+<label for="cb1">cb1</label> 
+<input type="checkbox" name="cb1" id="cb1"> 
+<br> 
+ 
+<!-- Marcado al cargar la página --> 
+<label for="cb2">cb2</label> 
+<input type="checkbox" name="cb2" id="cb2" checked> 
+ 
+<script> 
+  $(document).ready(function () { 
+    $(":checkbox").on("change", function () { 
+      if ($('#cb1').attr('checked')) { console.log("cb1 IS checked!"); } 
+      else { console.log("cb1 IS NOT checked!"); } 
+      if ($('#cb2').attr('checked')) { console.log("cb2 IS checked!"); } 
+      else { console.log("cb2 IS NOT checked!"); } 
     }); 
-  </script> 
-   
+  }); 
+</script> 
+
   
   </body>
 </html>
