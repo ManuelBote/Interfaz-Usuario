@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej14</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+
+    <input type="button" value="Actualizar" id="refresh" />
+    <div id="respuesta">
+
+    </div>
+
+    <script>
+      $(document).ready(function () {
+
+        $("#refresh").click(function () {
+          $.ajax({
+            url: "Ej13-jquery.json",
+            type: "GET",
+            success: function (data) {
+              // Inserta aquí tu código
+              data.each(function(){
+                $("#respuesta").append("<div id='marca'>Marca: "+this.marca+"</div><div>Coches");
+                
+              })
+            },
+          });
+        });
+
+      });
+    </script>
+
+  </body>
+</html>

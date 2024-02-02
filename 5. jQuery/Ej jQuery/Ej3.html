@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ej3</title>
     <script src="jquery-3.7.1.min.js"></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <style>
-        .sinalt{
-            border: 1px solid red;
-        }
+      .sinalt {
+        border: 1px solid red;
+      }
     </style>
 
-    <img src="imagen2.jpg" width="200px">
-    <img src="imagen2.jpg" alt="" width="200px">
-    <img src="imagen2.jpg" alt="imagen" width="200px">
+    <img src="imagen2.jpg" width="200px" />
+    <img src="imagen2.jpg" alt="" width="200px" />
+    <img src="imagen2.jpg" alt="imagen" width="200px" />
 
     <script>
-        $(document).ready(function () {
-            $.each($("img"), function (img, value) { 
-                console.log($(this).attr("alt"))
-                if($(this).attr("alt")==null || $(this).attr("alt")==""){
-                    $(this).addClass("sinalt");
-                    console.log($(img))
-                }
-                 
-            });
+      $(document).ready(function () {
 
-        });
+        $("img[alt=''], img:not([alt])").addClass("sinalt");
+
+        if (!$("img").attr("alt") || $("img").attr("alt").trim() == "") {
+          $(this).addClass("sinalt");
+          console.log($("img"));
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

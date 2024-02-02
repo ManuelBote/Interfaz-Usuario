@@ -7,19 +7,62 @@
     <script src="jquery-3.7.1.min.js"></script>
   </head>
   <body>
-    <input type="button" id="boton" value="Cargar HTML externo" />
-    <div id="cargaexterna">Aquí se cargará el HTML externo</div>
+    <form id="formulario-registro">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" />
+      </div>
+
+      <div>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" />
+      </div>
+
+      <div>
+        <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" />
+      </div>
+
+      <div>
+        <label for="sexo">Sexo:</label>
+        <input type="radio" id="sexo-hombre" name="sexo" value="hombre" />
+        <label for="sexo-hombre">Hombre</label>
+        <input type="radio" id="sexo-mujer" name="sexo" value="mujer" />
+        <label for="sexo-mujer">Mujer</label>
+      </div>
+      <input type="submit" value="Registrarse" />
+    </form>
+    <div id="mensaje-registro"></div>
 
     <script>
       $(document).ready(function () {
-        $("#boton").on("click", function () {
+        $("#formulario-registro").on("submit", function(event){
+          event.preventDefault();
+
+          var nombre = $("#nombre").val();
+          var apellidos = $("#apellidos").val();
+          var fechaNacimiento = $("#fecha-nacimiento").val();
+          var sexo = $("input[name='sexo']:checked").val();
+
           $.ajax({
-            method: "GET",
-            url: "mi-otra-pagina.php",
-            success: function (data, textStatus, jqXHR) {
-              $("#cargaexterna").html(data);
+            url: "registro.php",
+            type: "GET",
+            data: {
+              nombre: nombre,
+              apellidos: apellidos,
+              fechaNacimiento: fechaNacimiento,
+              sexo: sexo,
             },
-            data: { coche: "Ford", modelo: "Focus", color: "rojo" },
+            success: function (data) {
+              var respuesta = JSON.parse(data);
+              if (respuesta.error == 0) {
+                $("#mensaje-registro").html("Registro completado");
+              } else {
+                $("#mensaje-registro").html(
+                  "Error " + respuesta.error + ": " + respuesta.error_msg
+                );
+              }
+            },
           });
         });
       });

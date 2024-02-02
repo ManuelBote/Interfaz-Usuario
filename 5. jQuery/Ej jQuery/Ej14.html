@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej14</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <style> 
+      #error-message { 
+        display: none; 
+        color: red; 
+      } 
+    </style> 
+     
+    <form> 
+      <label for="binary-input">Introduce un número binario:</label> 
+      <input type="text" id="binary-input" maxlength="8"> 
+      <button type="submit">Enviar</button> 
+    </form> 
+     
+    <div id="error-message">Introduce sólo números binarios (0 ó 1).</div> 
+
+    <script>
+      $(document).ready(function () {
+
+        $("#binary-input").on("keydown", function(event){
+          console.log(event.key);
+          if(event.key!='0' && event.key!='1' && event.key!="Backspace"){
+            event.preventDefault();
+            $("#error-message").slideDown("slow").delay(1000).slideUp("slow");
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>

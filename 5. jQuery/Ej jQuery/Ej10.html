@@ -7,32 +7,46 @@
     <script src="jquery-3.7.1.min.js"></script>
   </head>
   <body>
-
-    <form id="login-form"> 
-      <input type="text" name="username" id="username" placeholder="Nombre de Usuario"> 
-      <input type="password" name="password" id="password" placeholder="Contraseña"> 
-      <input type="submit" id="submit-btn" value="Iniciar Sesión"> 
-      <div id="alert"></div> 
+    <form id="login-form">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Nombre de Usuario"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Contraseña"
+      />
+      <input type="submit" id="submit-btn" value="Iniciar Sesión" />
+      <div id="alert"></div>
     </form>
-
 
     <script>
       $(document).ready(function () {
+        $user = $("#username");
+        $ps = $("#password");
 
-        $("#login-form").on("submit", function () {
-          $("#alert").text("");
-
-          $user = $("#username");
-          $ps = $("#password");
-
-          if($user.val() == null || $ps.val() == null){
-            
+        $("#login-form").on("submit", function (event) {
+          if ($user.val().trim() == "" || $ps.val().trim() == "") {
+            event.preventDefault();
+            $("#alert").hide();
+            $("#alert").text("Error");
+            $("#alert").slideDown("slow");
           }
 
-
+          // if ($user.val() == "" || $ps.val() == "") {
+          //   event.preventDefault();
+          //   $("#alert").remove();
+          //   $("#login-form").append("<div id='alert'>Error</div>");
+          //   $("#alert").hide();
+          //   $("#alert").slideDown("slow");
+          // }
+          
         });
       });
     </script>
-    
   </body>
 </html>
