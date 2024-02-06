@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ej14</title>
+    <title>Ej13</title>
     <script src="jquery-3.7.1.min.js"></script>
   </head>
   <body>
 
     <input type="button" value="Actualizar" id="refresh" />
+    <br><br>
     <div id="respuesta">
 
     </div>
@@ -17,17 +18,27 @@
       $(document).ready(function () {
 
         $("#refresh").click(function () {
+          $("#respuesta").empty();
+          
           $.ajax({
             url: "Ej13-jquery.json",
             type: "GET",
             success: function (data) {
+              console.log(data);
               // Inserta aquí tu código
-              data.each(function(){
-                $("#respuesta").append("<div id='marca'>Marca: "+this.marca+"</div><div>Coches");
-                
-              })
-            },
+              
+              $("#respuesta").append("<ol id='lista'>");
+              $.each(data, function(key, value){
+                $("#lista").append("<li>Marca: "+value.marca+"<ol id='marca"+key+"''>");
+                $.each(value.coches, function (indice, valor) {
+                  $("#marca"+key).append("<li>Modelo: "+valor.modelo+" | Color: "+valor.color+" | Precio: "+valor.precio+"</li>");
+                });
+                $("#lista").append("</ol></li>");
+              });
+              $("#respuesta").append("</ol>");
+            }
           });
+
         });
 
       });

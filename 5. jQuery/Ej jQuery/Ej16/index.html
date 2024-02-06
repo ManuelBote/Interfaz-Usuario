@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej16</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <style> 
+      header { 
+        background-color: lightblue; 
+        height: 100px; 
+      } 
+     
+      main { 
+        display: grid; 
+        grid-template-columns: 1fr minmax(200px, auto); 
+      } 
+     
+      section { 
+        background-color: lightcoral; 
+        min-height: 200px; 
+      } 
+     
+      aside { 
+        background-color: lightgoldenrodyellow; 
+      } 
+     
+      footer { 
+        background-color: lightgreen; 
+        height: 100px; 
+      } 
+    </style> 
+     
+    <header>header</header> 
+    <main> 
+      <section>section</section> 
+      <aside id="res">aside</aside> 
+    </main> 
+    <footer>footer</footer> 
+
+    <script>
+      $(document).ready(function () {
+
+        $("#res").load("resultados.html", function(response, status, xhr){
+          if ( status == "error" ) {
+              var msg = "Error al cartgar la pagina: ";
+              $( "#res" ).html( msg + xhr.status + " " + xhr.statusText );
+            }
+
+        }).hide().fadeIn("slow");
+
+        setInterval(function(){
+          $("#res").fadeOut("slow");
+          $("#res").fadeIn("slow");
+        
+        }, 5000)
+
+      });
+    </script>
+  </body>
+</html>

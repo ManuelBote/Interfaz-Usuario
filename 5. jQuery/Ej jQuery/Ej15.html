@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej15</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    
+    <form id="car-brands-form"> 
+        <p>Elige al menos una marca de coche:</p> 
+        <label><input type="checkbox" name="brand" value="Toyota"> 
+      Toyota</label><br> 
+        <label><input type="checkbox" name="brand" value="Ford"> Ford</label><br> 
+        <label><input type="checkbox" name="brand" value="Honda"> Honda</label><br> 
+        <label><input type="checkbox" name="brand" value="BMW"> BMW</label><br> 
+        <label><input type="checkbox" name="brand" value="Mercedes"> 
+      Mercedes</label><br><br> 
+        <button type="submit">Enviar</button> 
+      </form> 
+       
+      <div id="error-message" style="color: red; display: none;">Selecciona al menos 
+      una marca de coche.</div>
+
+    <script>
+      $(document).ready(function () {
+
+        var cont = 0;
+
+        $("#car-brands-form").on("submit", function(e){
+            $("input").each(function(){
+                if($(this).is(":checked")){
+                    cont++;
+                }
+            })
+
+            if(cont == 0){
+                e.preventDefault();
+                $("#error-message").css("display", "inline");
+            }
+        })
+
+
+
+      });
+    </script>
+  </body>
+</html>
