@@ -45,10 +45,9 @@
 
         $("#res").load("resultados.html", function(response, status, xhr){
           if ( status == "error" ) {
-              var msg = "Error al cartgar la pagina: ";
+              var msg = "Error al cargar la pagina: ";
               $( "#res" ).html( msg + xhr.status + " " + xhr.statusText );
             }
-
         }).hide().fadeIn("slow");
 
         setInterval(function(){
