@@ -36,11 +36,13 @@
         var $select = $("#select-entrantes");
         var $salsas = $("#salsas");
         var $error = $("#error");
+        var $resultado = $("#resultado");
 
         $select.on("change", function(){
 
-          $salsas.hide();
-          $error.hide();
+          $salsas.empty().hide();
+          $error.empty().hide();
+          $resultado.empty().hide();
 
           if($(this).val()=="patatas"){
             $salsas.load("patatas.html").slideDown("slow");
@@ -51,6 +53,15 @@
 
         });
 
+        $salsas.on("change", "input[name='salsa']", function(){
+
+          $("div span").remove();
+          
+          if($("[name='salsa']").is(":checked")==true){
+           $(this).siblings().after("<span id='icono' style='color:green;'> ✓</span>");
+          }
+        });
+
         $formulario.on("submit", function(e){
           if($select.val()=="none"){
             e.preventDefault();
@@ -59,6 +70,9 @@
             if($("[name='salsa']").is(":checked")==false){
               e.preventDefault();
               $error.text("Selecciona una salsa").show();
+            }
+            else{
+              $resultado.text("Has seleccionado "+$select.val() + " con " + $salsa.val());
             }
           }
         })
