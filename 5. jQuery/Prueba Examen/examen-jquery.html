@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2023-03-06. jQuery</title>
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <input type="button" id="btn-carga" value="Cargar formulario">
+  <div id="formulario-container"></div>
+
+  <script>
+    // Escribe aquí tu código
+    $(document).ready(function () {
+
+      var $formulario = $("#formulario-container");
+
+      $("#btn-carga").on("click", function(){
+        $formulario.hide().slideDown().load('formulario.html', function(response, status, xhr){
+          if(status != "error"){
+            $formulario.css({"border":"2px solid black", "padding":"1rem"});
+          }         
+        });
+      });
+
+      $formulario.on('focusin', "[type='password']", function(){
+        $("[type='password']").css({"background-color":"lightgreen"});
+      });
+          
+      $formulario.on('focusout', "[type='password']", function(){
+        $("#msError").remove();
+        if($("[type='password']").val().length<8){
+          $("[type='password']").after("<span id='msError'>Minimo 8 caracteres</span>");
+          $("[type='password']").css({"background-color":"red"});
+        }
+      });
+      
+    })
+
+  </script>
+
+</body>
+
+</html>
