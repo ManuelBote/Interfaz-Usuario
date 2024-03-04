@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2024-02-29. Examen Bootstrap + jQuery</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="p-1">
+
+    <header class="text-bg-danger p-1 text-center">
+      <h1 class="">Busca Casa [Manuel Bote Zabala]</h1>
+    </header>
+
+    <main class="container-lg p-3">
+      <article class="row g-2">
+
+        <div class="col-sm-6 col-md-4 border border-dark-subtle">
+          <form action="#" class="p-2" id="formulario">
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="poblacion" placeholder=""/>
+              <label for="poblacion">Poblacion</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio maximo: 
+                    <span class="badge text-bg-info" id="precio-badge">1000€</span>
+                </label>
+                <input type="range" class="form-range" min="0" max="10" value="10" id="precio"/>
+            </div>
+
+            <div class="mb-3">
+                <h3>Habitaciones</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Garaje
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Ascensor
+                            </label>
+                          </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Terraza
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Piscina
+                            </label>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h3>Equipamiento</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Amueblado
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No amueblado
+                    </label>
+                  </div>
+            </div>
+
+            <div class="text-center mb-3">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+
+        
+          </form>
+        </div>
+
+        <div class="col border border-dark-subtle align-self-start ms-md-3">
+            <h3 class="p-2">Resultados:</h3>
+            <div id="resultados"></div>
+        </div>
+        
+      </article>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+            
+            $("#precio").on("input", function(){
+                $("#precio-badge").text(($("#precio").val()*100)+"€");
+            })
+
+            $("#formulario").on("submit", function(event){
+                event.preventDefault();
+                $("#msError").remove();
+                $("#respuesta").empty();
+
+                if($("#poblacion").val() == ""){
+                    $("#poblacion").after("<span id='msError' class='text-danger'>Indica una poblacion</span>");
+                } else{
+                    $.ajax({
+                        url: "viviendas.json",
+                        type: "GET",
+                        dataType:"json",
+                        success:function(data){
+                            console.log(data.viviendas)
+                            if(data.viviendas == null){
+                                $("#resultados").html(
+                                    '<div class="alert alert-danger" role="alert">Lo siento, no hemos encontrado viviendas para ti.</div>'
+                                )
+                            } else{
+                                $("#resultados").html(
+                                    '<div class="alert alert-success" role="alert">Hemos encontrado las siguientes viviendas para ti:</div>'
+                                )
+                                
+                                $("#resultados").append("<ol>");
+                                $.each(data.viviendas, function(key, value){
+                                    $("ol").append("<li><b>Direccion: </b>"+value.direccion+", <b>Precio: </b>"+value.precio+"</li>")
+                                });
+                                $("#resultados").append("</ol>");
+                            }
+                        },
+                        error:function(){
+                            $("#resultados").html(
+                                    '<div class="alert alert-danger" role="alert">Se ha producido un error en la llamada</div>'
+                                )
+                        }
+                    })
+                }
+            })
+
+        });
+    </script>
+  </body>
+</html>
